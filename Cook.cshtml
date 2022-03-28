@@ -1,0 +1,162 @@
+﻿
+@{
+    Layout = null;
+}
+@using db_connectivity.Models;
+@model List<Cookers>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        #Slogun {
+            text-transform: uppercase;
+            color: 09355c !important;
+            margin: 24px;
+            font-family: 'Lobster', cursive;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 80;
+            margin: 4.5rem 0 3rem 0;
+            letter-spacing: 3px;
+        }
+
+        .nav-colour {
+            background-color: 09355c;
+            color: white;
+            font-family: "BellMTStd-Regular", serif;
+            font-size: 3rem;
+            font-weight: 40;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-family: "BellMTStd-Regular", serif;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 50;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-family: "BellMTStd-Regular", serif;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 50;
+            letter-spacing: 1px;
+        }
+    </style>
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+        <a class="navbar-brand" href="#">Hotel BeachWood</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+                aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ml-3 active">
+                    <a class="nav-link" href="../../Home/index">
+                        Home<span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link" href="../../Home/RoomType">Rooms</a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link" href="../../Home/FoodType">Foods</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item ml-3">
+                    <a class="nav-link waves-effect waves-light" href="../../Home/SignUP">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link waves-effect waves-light" href="../../Home/SignUP">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                </li>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+    <h3 id="Slogun">Cook</h3>
+
+
+    <div class="container col-lg-4" style="text-align:center">
+
+        <div class="modal-header light-blue darken-3 white-text">
+            <h4 class="title"><i class="fas fa-sign-in-alt mr-3"></i>Requests for food</h4>
+
+        </div>
+        <!--Body-->
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Customer_Id</th>
+                    <th scope="col">Food_Name</th>
+                    <th scope="col">Food_Type</th>
+                    <th scope="col">No_of_Orders</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Cookers user in Model)
+                {
+                    <tr>
+                        <td>@user.Custid</td>
+                        <td>@user.FoodName</td>
+                        <td>@user.Foodtype</td>
+                        <td>@user.Noofitems</td>
+                        @if (user.stat != "P")
+                        {
+                            <td>@user.stat</td>
+                        }
+                        else
+                        {
+                           
+                            <td>@Html.ActionLink("Accept", "Choosen", null, new { custid = @user.Custid, userId = @user.cookid, name = @user.FoodName, choice = "A", style = "color:green" }, null) @Html.ActionLink("Reject", "Choosen", null, new { custid = @user.Custid, userId = @user.cookid, name = @user.FoodName, choice = "R", style = "color:red" }, null)</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+
+
+    </div>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cook</title>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add_Staff</title>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        #Slogun {
+            text-transform: uppercase;
+            color: 09355c !important;
+            margin: 24px;
+            font-family: 'Lobster', cursive;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 100;
+            margin: 4.5rem 0 3rem 0;
+            letter-spacing: 3px;
+        }
+
+        .nav-colour {
+            background-color: 09355c;
+            color: white;
+            font-family: "BellMTStd-Regular", serif;
+            font-size: 3rem;
+            font-weight: 40;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-family: "BellMTStd-Regular", serif;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 50;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-family: "BellMTStd-Regular", serif;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 50;
+            letter-spacing: 1px;
+        }
+    </style>
+
+
+
+    
+
+</head>
+
+
+<body>
+
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+        <a class="navbar-brand" href="#">Hotel BeachWood</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+                aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ml-3 active">
+                    <a class="nav-link" href="../../Home/index">
+                        Home<span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link" href="../../Home/RoomType">Rooms</a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link" href="../../Home/FoodType">Foods</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item ml-3">
+                    <a class="nav-link waves-effect waves-light" href="../../Home/SignUP">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link waves-effect waves-light" href="../../Home/SignUP">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                </li>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+
+
+
+    <br />
+    <br />
+    <h1 class="text-center" style="font-family:Georgia, 'Times New Roman', Times, serif">Remove STAFF MEMBER</h1>
+    <br />
+    <br />
+    <div class="container col-lg-4" style="text-align:center">
+
+        <!--Body-->
+        <form method="post" action="../Home/Removestaff">
+
+            <!-- Material form register -->
+            <div class="card">
+
+                <h5 class="card-header info-color white-text text-center py-4">
+                    <strong>Remove Staff</strong>
+                </h5>
+
+                <!--Card content-->
+                <div class="card-body px-lg-5 pt-0">
+
+                    <!-- Form -->
+                    <form class="text-center" style="color: #757575;" action="#!">
+
+
+
+                        <br />
+
+                        <!-- C-NIC -->
+                        <div class="md-form mt-0">
+                            <input type="text" required name="id" id="materialRegisterFormID" class="form-control">
+                            <label for="materialRegisterFormID">User ID</label>
+                            <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                                Must be smaller than 7 letters
+                            </small>
+                        </div>
+
+
+
+                        <dl>
+                            <div class="container">
+                                <label class="text-muted">Position</label>
+                                <dd>
+                                    <label class="radio-inline ml-3">
+                                        <input type="radio" name="position" value="Manager" checked>Manager
+                                    </label>
+                                    <label class="radio-inline ml-3">
+                                        <input type="radio" name="position" value="Room Booker" />Room Booker
+                                    </label>
+                                    <label class="radio-inline ml-3">
+                                        <input type="radio" name="position" value="Cook" />Cook
+                                    </label>
+                                </dd>
+                            </div>
+                        </dl>
+
+
+
+
+
+
+
+                        <!-- Sign up button -->
+                        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Remove</button>
+
+
+
+
+                        <!-- Terms of service -->
+                        <p>
+                            By clicking
+                            <em>Sign up</em> you agree to our
+                            <a href="" target="_blank">terms of service</a>
+
+                    </form>
+                    <!-- Form -->
+
+                </div>
+
+            </div>
+            <!-- Material form register -->
+        </form>
+    </div>
+    </div>
+
+    <br /><br />
+
+
+</body>
+</html>

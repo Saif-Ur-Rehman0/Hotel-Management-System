@@ -1,0 +1,299 @@
+﻿
+@{
+    Layout = null;
+}
+@model  string
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <!-- Paging-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        #Slogun {
+            text-transform: uppercase;
+            color: 09355c !important;
+            margin: 24px;
+            font-family: 'Lobster', cursive;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 80;
+            margin: 4.5rem 0 3rem 0;
+            letter-spacing: 3px;
+        }
+
+        .nav-colour {
+            background-color: 09355c;
+            color: white;
+            font-family: "BellMTStd-Regular", serif;
+            font-size: 3rem;
+            font-weight: 40;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-family: "BellMTStd-Regular", serif;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 50;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-family: "BellMTStd-Regular", serif;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 50;
+            letter-spacing: 1px;
+        }
+    </style>
+
+
+
+
+
+
+
+</head>
+
+
+<body style="background-color: #eee;">
+
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+        <a class="navbar-brand" href="#">Hotel BeachWood</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+                aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ml-3 active">
+                    <a class="nav-link" href="../../Home/index">
+                        Home<span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link" href="../../Home/RoomType">Rooms</a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link" href="../../Home/FoodType">Foods</a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link" href="../../Home/Feedback">Feedback</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item ml-3">
+                    <a class="nav-link waves-effect waves-light" href="../../Home/SignUP">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link waves-effect waves-light" href="../../Home/SignUP">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                </li>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+
+
+
+    <h3 id="Slogun">A Glorious Stay</h3>
+
+    <div class="container">
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src=https://wowreads.com/wp-content/uploads/2016/01/image.background-body-1024x576.jpg alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">king Deal</h2>
+                    <a href="../../Home/OrderFood?foodid=1" class="btn btn-primary stretched-link">Order Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://i2.wp.com/www.wefindyougo.com/wp-content/uploads/2013/10/Pakistani-Food.jpg?resize=690%2C350&ssl=1" alt="Card image cap">
+                <br />
+                <div class="card-body">
+                    <h2 class="card-title">Tikka Kabab</h2>
+                    <a href="../../Home/OrderFood?foodid=2" class="btn btn-primary stretched-link">Order Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://www.successgroup.com.pk/wp-content/uploads/2018/08/food.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Qorma With Rice</h2>
+                    <a href="../../Home/OrderFood?foodid=3" class="btn btn-primary stretched-link">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src=https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQK8inDlYBZNn0fZBk_Svul57PLLmeb1vMHkivplm987-Ic4ajr&usqp=CAU alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Samosa</h2>
+                    <a href="../../Home/OrderFood?foodid=4" class="btn btn-primary stretched-link">Order Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJP_cBuZUHgXlVndaPeMX8EFZIbcwDEaJkOKVQ03Ot-PyAIZOT&usqp=CAU" alt="Card image cap">
+                <br />
+                <div class="card-body">
+                    <h2 class="card-title">Kheer</h2>
+                    <a href="../../Home/OrderFood?foodid=5" class="btn btn-primary stretched-link">Order Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://blog.pakistani.pk/wp-content/uploads/2015/01/5-Popular-Pakistani-Sweet-Dishes-Gajar-Ka-Halwa-600x430.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Halwa</h2>
+                    <a href="../../Home/OrderFood?foodid=6" class="btn btn-primary stretched-link">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="https://foodyoushouldtry.com/wp-content/uploads/2017/09/Chappli-Kabab.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Chapli Kabab</h2>
+                    <a href="../../Home/OrderFood?foodid=7" class="btn btn-primary stretched-link">Order Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://photos.smugmug.com/Pakistan/i-V8LQdZd/0/33a83314/X3/pakistan-trip-42-X3.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Karahi Gosht</h2>
+                    <a href="../../Home/OrderFood?foodid=8" class="btn btn-primary stretched-link">Order Now</a>
+
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://image.freepik.com/free-photo/pakistani-style-spicy-chicken-biryani-with-raita_162831-18.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Biryani</h2>
+                    <a href="../../Home/OrderFood?foodid=9" class="btn btn-primary stretched-link">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark">
+
+        <div style="background-color: #4f9c87;">
+            <div class="container">
+                <div class="row py-4 d-flex align-items-center">
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0">Get connected with us on social networks!</h6>
+                    </div>
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f white-text mr-4"> </i>
+                        </a>
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                        </a>
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                        </a>
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram white-text"> </i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center text-md-left mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Hotel BeachWood</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Our hotels are designed to stimulate those parts of you still open and curious for new experiences and new people. Unique energy, beautiful design, genuine comfort and the opportunity for happy collisions with wonderful strangers. Let your student spirit roam.</p>
+
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Products</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="../../Home/RoomType">Rooms Categories</a>
+                    </p>
+                    <p>
+                        <a href="../../Home/FoodType">Foods Categories</a>
+                    </p>
+
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Important Links</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="../../Home/Login">Login</a>
+                    </p>
+                    <p>
+                        <a href="../../Home/SignUP">Signup</a>
+                    </p>
+
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> Lahore, LHR 38829, PAK
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> beachwood@hotmail.com
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> 042-38294302
+                    </p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> +92-3028492720
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">
+            © 2020 Copyright:
+            <a href="../../Home/index"> hotelbeachwood.com</a>
+        </div>
+    </footer>
+    <!-- Footer -->
+</body>
+
+
+</html>
+

@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+@using db_connectivity.Models;
+@model List<Staff>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homePage</title>
+</head>
+<body>
+    <div>
+
+        <table border="1">
+            <thead><tr><td>Name</td> <td>Password</td> <td>Phone No</td><td>CNIC</td><td>Gender</td><td>Salary</td><td>Position</td></tr></thead>
+
+            @foreach (Staff user in Model)
+            {
+            <tr>
+                <td>@user.name</td>
+                <td>@user.password</td>
+                <td>@user.phoneno</td>
+                <td>@user.Cnic</td>
+                <td>@user.gender</td>
+                <td>@user.salary</td>
+                <td>@user.position</td>
+            </tr>
+            }
+
+        </table>
+
+    </div>
+</body>
+</html>
